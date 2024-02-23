@@ -1,3 +1,4 @@
+use sakila;
 CREATE TABLE favorite_food
 (
     person_id SMALLINT UNSIGNED,
@@ -6,3 +7,4 @@ CREATE TABLE favorite_food
     CONSTRAINT fk_fav_food_person_id FOREIGN KEY (person_id)
     REFERENCES person (person_id)
 );
+desc favorite_food;

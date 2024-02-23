@@ -1,3 +1,5 @@
+use sakila;
+
 CREATE TABLE person
 (person_id SMALLINT UNSIGNED,
  fname VARCHAR(20),
@@ -11,3 +13,5 @@ CREATE TABLE person
  postal_code VARCHAR(20),
  CONSTRAINT pk_person PRIMARY KEY (person_id)
 );
+
+desc person;
