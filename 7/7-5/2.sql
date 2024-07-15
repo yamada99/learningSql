@@ -1,0 +1,7 @@
+use sakila;
+
+SELECT ABS(-25.76823);
+
+SELECT SIGN(-25.76823);
+
+SELECT ROUND(-25.76823, 2);

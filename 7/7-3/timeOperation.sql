@@ -1,0 +1,36 @@
+use sakila;
+
+SELECT @@global.time_zone, @@session.time_zone;
+-- SYSTEM SYSTEM
+
+-- SET time_zone = 'Europe/Zurich';
+-- 「Unknown or incorrect time zone」と出力されタイムゾーンが設定できない
+-- SELECT @@global.time_zone, @@session.time_zone;
+
+SELECT CAST('2019-09-17 15:30:00' AS DATETIME);
+
+SELECT CAST('2019-09-17 15:30:00' AS DATE) date_field,
+       CAST('108:17:57' AS TIME) time_field;
+
+
+SELECT STR_TO_DATE('September 17, 2019','%M %d, %Y');
+
+SELECT CURRENT_DATE(), CURRENT_TIME(), CURRENT_TIMESTAMP();
+
+SELECT DATE_ADD(CURRENT_DATE(), INTERVAL 5 DAY);
+
+SELECT DATE_ADD(CURRENT_TIME(), INTERVAL '3:27:11' HOUR_SECOND);
+
+SELECT DATE_ADD(CURRENT_DATE(), INTERVAL '9-11' YEAR_MONTH);
+
+SELECT LAST_DAY('2019-09-17');
+
+SELECT DAYNAME('2019-09-18');
+
+SELECT EXTRACT(YEAR FROM '2019-09-18 22:19:05');
+
+SELECT DATEDIFF('2019-09-03','2019-06-21');
+
+SELECT DATEDIFF('2019-09-03 23:59:59','2019-06-21 00:00:01');
+
+SELECT DATEDIFF('2019-06-21','2019-09-03');
